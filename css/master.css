@@ -50,6 +50,8 @@ body {
     position: relative;
 }
 
+
+/* 
 .header:after,
 .header:before {
     content: '';
@@ -75,7 +77,7 @@ body {
     left: 50%;
     border-left: 105vh solid transparent;
     border-right: 105vh solid;
-}
+} */
 
 .header .content {
     position: absolute;
