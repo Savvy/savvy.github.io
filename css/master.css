@@ -15,6 +15,10 @@ body,
     margin: 0;
 }
 
+.no-scroll {
+    overflow: hidden;
+}
+
 html {
     -webkit-background-size: cover;
     -moz-background-size: cover;

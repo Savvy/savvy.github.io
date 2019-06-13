@@ -10,5 +10,6 @@ $(document).ready(function() {
 
 $('#nav-toggle').on('click', function() {
     $('#nav-toggle').toggleClass('active');
+    $(document.body).toggleClass('no-scroll');
     $('nav').toggleClass('active');
 });
