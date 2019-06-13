@@ -1,147 +1,120 @@
-label {
+.nav-mobile {
     display: block;
-    margin: 0;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    height: 70px;
+    width: 70px;
+    z-index: 999;
 }
 
-label .menu {
+#nav-toggle {
     position: absolute;
-    right: -100px;
-    top: -100px;
-    z-index: 100;
-    width: 200px;
-    height: 200px;
-    background: #1488cc;
-    background: -webkit-linear-gradient(to right, #1488cc, #2b32b2);
-    background: linear-gradient(to right, #1488cc, #2b32b2);
-    border-radius: 50% 50% 50% 50%;
-    transition: .5s ease-in-out;
-    box-shadow: 0 0 0 0 #FFF, 0 0 0 0 #FFF;
+    left: 18px;
+    top: 22px;
     cursor: pointer;
+    padding: 10px 35px 16px 0px;
 }
 
-label .hamburger {
-    position: absolute;
-    top: 140px;
-    left: 40px;
-    width: 30px;
+#nav-toggle span,
+#nav-toggle span:before,
+#nav-toggle span:after {
+    cursor: pointer;
+    border-radius: 1px;
     height: 2px;
-    background: #ddd;
-    display: block;
-    -webkit-transform-origin: center;
-    transform-origin: center;
-    transition: .5s ease-in-out;
-}
-
-label .hamburger:after,
-label .hamburger:before {
-    transition: .5s ease-in-out;
-    content: "";
+    width: 35px;
+    background: #fff;
     position: absolute;
     display: block;
-    width: 100%;
-    height: 100%;
-    background: #ddd;
+    content: " ";
+    transition: all 300ms ease-in-out;
 }
 
-label .hamburger:before {
+#nav-toggle span {
+    width: 25px;
+}
+
+#nav-toggle span:before {
     top: -10px;
 }
 
-label .hamburger:after {
+#nav-toggle span:after {
     bottom: -10px;
 }
 
-label input {
-    display: none;
+#nav-toggle.active span {
+    background-color: transparent;
 }
 
-label input:checked+.menu {
-    box-shadow: 0 0 0 100vw #262934, 0 0 0 900vh #262934;
-    border-radius: 0;
-}
-
-label input:checked+.menu .hamburger {
-    -webkit-transform: rotate(45deg);
+#nav-toggle.active span:before {
     transform: rotate(45deg);
 }
 
-label input:checked+.menu .hamburger:after {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
-    bottom: 0;
+#nav-toggle.active span:after {
+    transform: rotate(-45deg);
 }
 
-label input:checked+.menu .hamburger:before {
-    -webkit-transform: rotate(90deg);
-    transform: rotate(90deg);
+#nav-toggle.active span:before,
+#nav-toggle.active span:after {
     top: 0;
 }
 
-label input:checked+.menu+#navbar,
-label input:checked+.menu+ul+#social-list {
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: fixed;
+    z-index: 10;
+    background-color: #262934;
+    width: 100%;
+    height: 0;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .35s, visibility .35s, height .35s;
+}
+
+nav.active {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+nav.active ul li {
     display: block;
+    position: relative;
+    opacity: 0;
+    animation: fadeInRight .5s ease forwards;
+    animation-delay: .35s;
 }
 
-label #social-list {
-    top: 55%;
-    left: 80%;
+nav ul li {
+    list-style: none;
+    padding: 10px;
 }
 
-label #social-list li {
-    float: left;
-    margin-right: 12px;
-}
-
-label #social-list li:last-child {
-    margin-right: 0;
-}
-
-label #social-list li .fab {
-    color: #fff;
-    font-size: 1.6375rem;
-}
-
-label #social-list li .fab:hover {
-    background: -webkit-gradient(linear, left top, left bottom, from(#1488cc), to(#2b32b2));
-    background-clip: text;
-    animation: moving 10s ease;
-    animation-iteration-count: 1;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -webkit-animation: moving 10s ease;
-    -webkit-animation-iteration-count: 1;
-}
-
-label ul {
-    list-style-type: none;
-    z-index: 200;
-    position: absolute;
-    top: 30%;
-    left: 80%;
-    -webkit-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    display: none;
-    transition: .25s .25s all ease-in-out;
-}
-
-label a {
-    margin-bottom: 0;
-    display: block;
-    text-decoration: none;
-    font-size: 5rem;
-}
-
-label #navbar a {
+nav ul li a {
     color: #ddd;
     font-family: 'Fjalla One', sans-serif;
+    font-size: 5rem;
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
     position: relative;
     display: inline-block;
+    margin-bottom: 0;
+    text-decoration: none;
+    line-height: 1;
 }
 
-label #navbar a:after {
+nav ul li a:hover {
+    color: #ddd;
+    text-decoration: none;
+}
+
+nav ul li a:after {
     display: block;
     content: '';
     height: 4px;
@@ -152,6 +125,60 @@ label #navbar a:after {
     transition: transform 250ms ease-in-out;
 }
 
-label #navbar a:hover:after {
+nav ul li a:hover:after {
     transform: scaleX(1);
+}
+
+nav.active ul li:nth-of-type(2) {
+    animation-delay: .4s;
+}
+
+nav.active ul li:nth-of-type(3) {
+    animation-delay: .45s;
+}
+
+nav.active ul li:nth-of-type(4) {
+    animation-delay: .50s;
+}
+
+nav.active ul li:nth-of-type(5) {
+    animation-delay: .55s;
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        left: 20%;
+    }
+    100% {
+        opacity: 1;
+        left: 0;
+    }
+}
+
+nav #social-list {
+    margin: 0 auto;
+}
+
+nav.active #social-list li {
+    float: left;
+}
+
+nav #social-list li a {
+    font-size: 1.5rem;
+}
+
+nav #social-list li a:after {
+    background: none;
+}
+
+nav #social-list li .fab:hover {
+    background: -webkit-gradient(linear, left top, left bottom, from(#1488cc), to(#2b32b2));
+    background-clip: text;
+    animation: moving 10s ease;
+    animation-iteration-count: 1;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -webkit-animation: moving 10s ease;
+    -webkit-animation-iteration-count: 1;
 }
