@@ -444,7 +444,7 @@ a.btn-dark:focus {
 .footer {
     background-color: #15171d;
     padding: 25px;
-    font-family: 'Raleway';
+    font-family: 'Roboto', sans-serif;
     font-size: 14px;
     text-align: center;
 }
