@@ -449,6 +449,10 @@ a.btn-dark:focus {
     text-align: center;
 }
 
+.footer p {
+    margin-bottom: 0;
+}
+
 .footer .left {
     float: left;
 }
