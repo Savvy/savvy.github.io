@@ -166,6 +166,8 @@ body {
 .stats-box ul {
     text-align: center;
     list-style-type: none;
+    min-height: 100%;
+    min-width: 100%;
 }
 
 .stats-box ul li {
@@ -192,6 +194,18 @@ body {
     font-size: 1.25rem;
 }
 
+@media (max-width: 576px) {
+    .stats-box ul li {
+        margin-right: 15px;
+    }
+    .stats-box ul li h1 {
+        font-size: 1.75rem;
+    }
+    .stats-box ul li h5 {
+        font-size: 0.95rem;
+    }
+}
+
 @media (min-width:576px) {
     .stats-box ul li {
         margin-right: 15px;
@@ -210,6 +224,12 @@ body {
 @media (min-width:992px) {
     .stats-box ul li h5 {
         font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 511px) {
+    .stats-box ul li {
+        float: none !important;
     }
 }
 
