@@ -1,0 +1,113 @@
+html,
+body {
+    min-height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100;
+}
+
+.header {
+    min-height: 230px;
+    width: 100%;
+    background: url('../images/about-header.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.header::after {
+    background-color: #000;
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.6;
+}
+
+.content {
+    z-index: 5;
+}
+
+.about-me {
+    margin-top: 100px;
+    word-break: break-word;
+}
+
+.about-me h1 {
+    text-align: left;
+    margin-bottom: 25px;
+}
+
+.about-me img {
+    width: 200px;
+}
+
+.section {
+    background-color: #15171d;
+    padding: 50px;
+}
+
+#quote {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#quote p {
+    font-size: 1.5rem;
+}
+
+#quote span {
+    padding-right: 75px;
+    float: right;
+}
+
+#contact {
+    padding: 50px;
+}
+
+.speak {
+    display: inline-block;
+    background: #15171d;
+    padding: 15px 10px 15px 25px;
+    border-radius: 50px;
+}
+
+.speak a {
+    margin-left: 25px;
+    background: #262934;
+    padding: 10px 25px;
+    border-radius: 25px;
+    color: #fff;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.about-content>.img-container {
+    flex: 0 1 25%;
+    text-align: center;
+}
+
+.about-content>.description {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1 0 75%;
+}
+
+.description>p {
+    text-indent: 2.5%;
+}
+
+.description>p>a {
+    text-indent: 0%;
+}
