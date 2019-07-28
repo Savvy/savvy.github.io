@@ -46,6 +46,24 @@ body {
     margin: 10px;
 }
 
+.filter ul li a {
+    font-family: 'Lato', sans-serif;
+    font-weight: 500;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #ddd;
+    background: #1e2029;
+    padding: 7px 30px;
+    border: 3px solid transparent;
+    transition: background .20s ease-in-out;
+}
+
+.filter ul li .active,
+.filter ul li:hover a {
+    border: 3px solid #1e2029;
+    background: transparent;
+}
+
 .items .item {
     position: relative;
     height: 350px;
@@ -55,11 +73,6 @@ body {
     overflow: hidden;
     cursor: pointer;
 }
-
-
-/* .items>.item:nth-child(even) {
-    margin-right: 0;
-} */
 
 .items .item .image {
     height: 100%;
