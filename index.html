@@ -31,7 +31,10 @@
 
     <body>
         <div id="mainLoad">
-            <img src="images/sav.gif" class="mx-auto img-fluid" alt="Logo Animation" draggable="false">
+            <!--
+                <img src="images/sav.gif" class="mx-auto img-fluid" alt="Logo Animation" draggable="false">
+            -->
+            <div id="logoAnimation"></div>
         </div>
         <div id="content" style="display: none;">
             <div class="nav-mobile">
@@ -139,6 +142,7 @@
     </body>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/lottie.js"></script>
     <script src="js/index.js"></script>
     <script type="text/javascript">
         window.onload = function() {
@@ -147,6 +151,15 @@
                 $('#content').fadeIn();
             }, 2500);
         };
+    </script>
+    <script type="text/javascript">
+        lottie.loadAnimation({
+            container: document.getElementById('logoAnimation'),
+            renderer: 'svg',
+            loop: false,
+            autoPlay: true,
+            path: 'assets/data.json'
+        });
     </script>
 
 </html>
