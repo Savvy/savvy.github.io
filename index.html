@@ -31,10 +31,8 @@
 
     <body>
         <div id="mainLoad">
-            <!--
-                <img src="images/sav.gif" class="mx-auto img-fluid" alt="Logo Animation" draggable="false">
-            -->
-            <div id="logoAnimation"></div>
+            <!-- <img src="images/sav.svg" class="mx-auto img-fluid" alt="Logo Animation" draggable="false"> -->
+            <div id="bm"></div>
         </div>
         <div id="content" style="display: none;">
             <div class="nav-mobile">
@@ -142,7 +140,7 @@
     </body>
     <script src="js/jquery-3.3.1.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/lottie.js"></script>
+    <script src="js/bodymovin.js"></script>
     <script src="js/index.js"></script>
     <script type="text/javascript">
         window.onload = function() {
@@ -153,10 +151,11 @@
         };
     </script>
     <script type="text/javascript">
-        lottie.loadAnimation({
-            container: document.getElementById('logoAnimation'),
+        bodymovin.loadAnimation({
+            container: document.getElementById('bm'),
             renderer: 'svg',
-            loop: false,
+            loop: true,
+            prerender: true,
             autoPlay: true,
             path: 'assets/data.json'
         });
