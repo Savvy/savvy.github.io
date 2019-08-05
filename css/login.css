@@ -1,0 +1,158 @@
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+.loginBox {
+    height: 100%;
+    width: 100%;
+    display: flex;
+}
+
+.login {
+    height: 100%;
+    flex: 0 0 45%;
+    background: transparent;
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    box-shadow: inset 25px 0px 25px -25px rgba(0, 0, 0, 0.45), inset -25px 0px 25px -25px rgba(0, 0, 0, 0.45);
+}
+
+.login:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-image: url('../images/memphis-mini-dark.png');
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.login>div {
+    z-index: 5;
+}
+
+.login h1 {
+    margin-bottom: 25px;
+}
+
+.login .row {
+    align-items: center;
+    flex-direction: column;
+}
+
+.loginForm {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.formContainer {
+    align-self: center;
+}
+
+.loginForm>input {
+    font-family: 'Lato', sans-serif;
+    background: #15171d;
+    color: #fff;
+    padding: 0 20px;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    height: 50px;
+    width: 100%;
+}
+
+.loginForm>input::-webkit-input-placeholder {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+.formContainer .text {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #ddd;
+    display: block;
+    text-align: center;
+}
+
+.formContainer .text a {
+    text-decoration: none;
+    color: #1488cc;
+    opacity: 0.8;
+    transition: opacity .25s ease-in-out;
+}
+
+.formContainer .text a:hover {
+    opacity: 1;
+}
+
+button {
+    margin: 15px 0 10px 0;
+    padding: 10px 15px;
+    width: 100%;
+    background: #1488cc;
+    color: #dddd;
+}
+
+.loginRight {
+    position: relative;
+    flex: 1;
+    background-image: url('../images/goldenhour.jpg');
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.loginRight:after {
+    content: " ";
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    z-index: 1;
+}
+
+.loginRight>.content {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: no-wrap;
+    height: 100%;
+    width: 100%;
+    z-index: 7;
+}
+
+.content>img {
+    display: block;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    margin: auto;
+}
+
+
+/* @media only screen and (max-width: 768px) { */
+
+@media only screen and (max-width: 956px) {
+    .login {
+        flex: 1 0 100%;
+        box-shadow: none !important;
+    }
+    .loginRight {
+        display: none;
+    }
+}
