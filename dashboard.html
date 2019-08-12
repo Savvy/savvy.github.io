@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+    <head>
+        <meta charset="utf-8">
+        <meta property="og:locale" content="en_US">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="author" content="Malcom Green">
+        <meta name="description" content="Design &amp; Development">
+        <meta property="og:site_name" content="Malcom Green">
+        <meta property="og:title" content="Malcom Green">
+        <meta property="og:description" content="Design &amp; Development">
+        <meta property="og:url" content="#">
+        <meta property="og:image" content="images/logo.png">
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:creator" content="@JustSavvyEQ">
+        <meta name="twitter:title" content="Malcom Green">
+        <meta name="twitter:description" content="Design &amp; Development">
+        <meta name="twitter:image" content="images/logo.png">
+        <meta name="twitter:image:alt" content="Malcom Green">
+        <title>Malcom Green | Design &amp; Development</title>
+        <link rel="shortcut icon" type="image/png" href="images/logo.png" />
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel="stylesheet">
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/master.css">
+        <link rel="stylesheet" href="css/dashboard.css">
+    </head>
+
+    <body>
+        <section class="navigation">
+            <div class="nav-container">
+                <div class="brand">
+                    <img src="./images/textLogo.png" alt="Logo">
+                </div>
+                <nav>
+                    <div class="nav-mobile"><a id="nav-toggle" href="#!"><span></span></a></div>
+                    <ul class="nav-list">
+                        <li><a href="#!"><i class="fa fa-bell"></i></a></li>
+                        <!-- <li><a href="#!"><i class="alerts fa fa-bell"></i></a></li> -->
+                        <li><a href="#!">Savvy</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#!">Account Settings</a></li>
+                                <li><a href="#!">Logout</a></li>
+                            </ul>
+                        </li>
+                        <!-- <li><a href="#!">Support</a>
+                            <ul class="nav-dropdown">
+                                <li><a href="#!">Web Design</a></li>
+                                <li><a href="#!">Web Development</a></li>
+                                <li><a href="#!">Graphic Design</a></li>
+                            </ul>
+                        </li> -->
+                    </ul>
+                </nav>
+            </div>
+        </section>
+
+        <div class="page-content">
+            <div class="side-menu">
+                <ul>
+                    <li class="active"><a href=""><i class="fa fa-tachometer-alt"></i>Dashboard</a></li>
+                    <li><a href=""><i class="fa fa-shopping-cart"></i> Orders</a></li>
+                    <li><a href=""><i class="fa fa-ticket-alt"></i> Support</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <div class="container">
+                    <div class="row clearfix justify-content-center">
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-card">
+                                <div class="icon"><i class="fa fa-users"></i></div>
+                                <div class="content">
+                                    <div class="text">Users Referred</div>
+                                    <div class="number">25</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-card">
+                                <div class="icon"><i class="fa fa-shopping-cart"></i></div>
+                                <div class="content">
+                                    <div class="text">Orders Placed</div>
+                                    <div class="number">5</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-card">
+                                <div class="icon"><i class="fa fa-newspaper"></i></div>
+                                <div class="content">
+                                    <div class="text">Completed Orders</div>
+                                    <div class="number">4</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+                            <div class="info-card">
+                                <div class="icon"><i class="fa fa-user"></i></div>
+                                <div class="content">
+                                    <div class="text">Active Tickets</div>
+                                    <div class="number">2</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="title">Active Orders</div>
+                        <div class="content">
+                            <div class="row">
+                                <div class="col-12 order">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="card-content">
+                                                <span class="status active"></span>
+                                                <div class="details">
+                                                    <h4>Order #6937</h4>
+                                                    <span class="text">Your order is active, check back later for updates</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 text-right"><a href="#" class="btn">View Order</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 order">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="card-content">
+                                                <span class="status inactive"></span>
+                                                <div class="details">
+                                                    <h4>Order #6938</h4>
+                                                    <span class="text">Your order is inactive, check back later for updates</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 text-right"><a href="#" class="btn">View Order</a></div>
+                                    </div>
+                                </div>
+                                <div class="col-12 order">
+                                    <div class="row">
+                                        <div class="col-10">
+                                            <div class="card-content">
+                                                <span class="status pending"></span>
+                                                <div class="details">
+                                                    <h4>Order #6939</h4>
+                                                    <span class="text">Your order is pending, check back later for updates</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-2 text-right"><a href="#" class="btn">View Order</a></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="card">
+                        <div class="title">Recent News</div>
+                        <div class="content">
+                            <div class="col-12 news">
+                                <div class="row">
+                                    <div class="col-10">
+                                        <div class="card-content">
+                                            <div class="details">
+                                                <h4>Content Update - Referrals</h4>
+                                                <span class="text">April 28th, 2019</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-2 text-right"><a href="#" class="btn">Read More</a></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.3.1.js"></script>
+        <script src="js/bootstrap.min.js"></script>
+        <script>
+            (function($) {
+                $(function() {
+                    $('nav ul li a:not(:only-child)').click(function(e) {
+                        $(this).siblings('.nav-dropdown').slideToggle(200);
+                        $('.nav-dropdown').not($(this).siblings()).slideUp(200);
+                        e.stopPropagation();
+                    });
+                    $('html').click(function() {
+                        $('.nav-dropdown').slideUp(200);
+                    });
+                    $('#nav-toggle').click(function() {
+                        $('nav ul').slideToggle();
+                    });
+                    $('#nav-toggle').on('click', function() {
+                        this.classList.toggle('active');
+                    });
+                });
+            })(jQuery);
+        </script>
+    </body>
