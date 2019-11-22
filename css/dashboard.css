@@ -134,6 +134,10 @@ nav ul li ul li a {
     }
 }
 
+.page-title {
+    margin-bottom: 25px;
+}
+
 #nav-toggle {
     position: absolute;
     left: 18px;
@@ -206,7 +210,7 @@ i.user.fa {
 
 .page-content>.content {
     flex: 1;
-    padding: 80px 25px;
+    padding: 40px 25px 0 25px;
 }
 
 .side-menu>ul {
@@ -306,6 +310,13 @@ i.user.fa {
     background: rgba(0, 0, 0, 0.12);
     border-bottom: 2px solid rgba(0, 0, 0, 0.12);
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card .title a {
+    float: right;
 }
 
 .card>.content {
